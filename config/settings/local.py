@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'djoser',
 
     # My applications
-    'apiv.apps.ApivConfig',
+    'apiv1.apps.Apiv1Config',
     'shop.apps.ShopConfig',
 ]
 
