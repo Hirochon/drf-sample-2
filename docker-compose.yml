@@ -7,7 +7,7 @@ services:
             POSTGRES_PASSWORD: "postgres"
         ports:
             - "5432:5432"
-    drf-sample:
+    drf-sample-2:
         build: .
         volumes: 
             - .:/code
