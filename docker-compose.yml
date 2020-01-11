@@ -9,7 +9,7 @@ services:
         ports:
             - "5432:5432"
 
-    drf-sample-2:
+    back:
         build:
             context: ./
         volumes: 
