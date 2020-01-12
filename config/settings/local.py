@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     # 3rd party apps
     'rest_framework',
     'djoser',
+    'corsheaders',
 
     # My applications
     'apiv1.apps.Apiv1Config',
@@ -38,6 +39,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -126,10 +128,19 @@ REST_FRAMEWORK = {
 }
 
 
+# JWT
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES' : ('JWT',),
     'ACCESS_TOKEN_LIFETIME' : timedelta(minutes=30)
 }
+
+
+# CORS
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8080',
+    'http://127.0.0.1:8080',
+)
 
 
 if DEBUG:
